@@ -1,3 +1,23 @@
 site_name: ClassIsland 文档
 theme:
   name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+nav:
+  - 首页: index.md
+  # - 应用帮助:
+  #   - app/Basic.md
+  - 集控:
+    - management/index.md
+    - management/configure.md
+    - management/policy.md
+    - management/tutorial-create-management-config.md
+  - 插件开发: plugins/index.md
