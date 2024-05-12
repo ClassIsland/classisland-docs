@@ -1,8 +1,26 @@
 site_name: ClassIsland 文档
+repo_url: https://github.com/HelloWRC/ClassIsland
 theme:
   name: material
   logo: assets/logo.svg
   favicon: assets/logo.svg
+  language: zh
+  palette:
+    # Toggle light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 浅色模式
+
+    # Toggle dark mode
+    - scheme: slate
+      primary: black
+      accent: black
+      toggle:
+        icon: material/weather-night
+        name: 深色模式
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
