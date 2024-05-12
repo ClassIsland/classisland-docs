@@ -5,6 +5,9 @@ theme:
   logo: assets/logo.svg
   favicon: assets/logo.svg
   language: zh
+  features:
+    - content.code.copy
+    - content.code.annotate  
   palette:
     # Toggle light mode
     - scheme: default
@@ -29,6 +32,20 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
   - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
 nav:
   - 首页: index.md
   # - 应用帮助:

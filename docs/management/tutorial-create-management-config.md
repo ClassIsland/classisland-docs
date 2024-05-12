@@ -6,69 +6,94 @@
 
 每当你看见👉️符号，就说明你应该做一些事情。而其余的只供您参考和更深入的理解。
 
+!!! tip "在这个教程中，我们将使用GitHub作为示例，并使用[GitHub Codespaces](https://github.dev)在线编辑这些配置文件。如果您要使用其它的平台，请自行替换文中与GitHub有关的操作。"
+
+!!! tip "如果在您的网络环境下无法正常连接GitHub，请考虑使用GitHub的替代品（如[Gitee](https://gitee.com/)）完成本教程。"
 
 ## 在开始之前
 
-您可以用任何文本编辑器来编辑这些配置文件，如[VS Code](https://code.visualstudio.com/)、[GitHub Codespaces](https://github.dev)，甚至是记事本。我们建议您安装一个带有json语法检查和高亮功能的编辑器。如果您安装了其它的编辑器，可以跳过这一步。
+我们需要在本地安装一个ClassIsland实例来测试集控。
 
-**👉️从[这里](https://code.visualstudio.com/)下载并安装VS Code。**
+**👉️按照指示[下载并安装ClassIsland本体](**👉️在GitHub上[新建一个公开存储库](https://github.com/new)，并命名为`classisland-mgmt-cfg`。**)。**
 
-## 开始
+!!! tip "如果您之前安装过 ClassIsland，建议您在另一位置安装一个新的实例，并在新的实例中完成本教学的内容。"
 
-我们需要新建一个文件夹，来存放接下来我们要用到的文件。
+为了托管我们的集控配置，我们需要在GitHub上[新建一个存储库](https://github.com/new)。
 
-**👉️新建一个文件夹。**
+**👉️在GitHub上[新建一个公开存储库](https://github.com/new)，并命名为`classisland-mgmt-cfg`。**
 
-**👉️进入刚刚创建的文件夹。**
+**👉️在创建仓库界面勾选【Add a README file】复选框**
 
-集控文件包含了要拉取的集控相关文件的信息和组织的相关信息，相当于一个索引文件。ClassIsland在加入集控后，会拉取这个文件，并根据此文件中的配置来拉取相关的文件。
+![1715485878305](image/tutorial-create-management-config/1715485878305.png)
 
-**👉️新建一个文件，并命名为`manifest.json`，并用文本编辑器打开。**
+!!! note "为了方便，我们在这里统一将仓库命名为`classisland-mgmt-cfg`，您也可以给仓库起一个您喜欢的名字。"
+
+为了在创建仓库时一起将仓库初始化，我们在这里勾选【Add a README file】，让 GitHub 在创建仓库时创建README文件，并初始化仓库。
+
+在仓库创建好之后，我们进入了仓库的主界面（如图所示）：
+
+![1715486027121](image/tutorial-create-management-config/1715486027121.png)
+
+现在我们需要进入 GitHub Codespaces 来编辑仓库里的文件。
+
+**👉️在仓库界面按下键盘上的<kbd>.</kbd>（英文句号）进入GitHub Codespaces。**
+
+![1715486161995](image/tutorial-create-management-config/1715486161995.png)
+
+现在万事俱备，我们可以开始编写集控的配置文件了。
+
+## 编写集控清单
+
+集控清单文件包含了要拉取的集控相关文件的信息和组织的相关信息，相当于一个索引文件。ClassIsland在加入集控后，会拉取这个文件，并根据此文件中的配置来拉取相关的文件。
+
+**👉️新建一个文件，并命名为`manifest.json`。**
 
 **👉️将以下文本粘贴到`manifest.json中`**
 
-```json
+```json title="manifest.json"
 {
     "ServerKind": 0,
     "OrganizationName": "Hello"
 }
 ```
 
-这就是一个最基础的清单文件了。这个文件说明了服务器类型是静态托管的，并且说明了组织名称。我们之后会逐渐完善这个文件。
+这就是一个最基础的清单文件了。这个文件说明了服务器类型是静态托管的，并且说明了组织名称。我们之后会根据需要逐渐完善这个文件。
 
-接下来我们要把这个文件静态托管到网上。您可以选择您喜欢的托管平台，我们这里以GitHub为例。如果您使用其它的托管平台，部分操作可能会与文档所述略有差异。
+!!! tip "您可以试着根据[集控配置文档](configure.md#集控清单)中的说明修改`OrganizationName`字段，设置自定义的组织名。"
 
-**👉️在GitHub上新建一个公开仓库，并将该文件夹中的文件上传到GitHub仓库中。**
+**👉️在编辑器【Git】工具窗口中提交更改。**
 
-上传完成后，我们就能在GitHub上看到我们的文件了。接下来我们需要指向这个文件内容的**直接链接**。
+我们要将当前的更改提交到GitHub上。提交完成后，我们就能在GitHub上看到我们的文件了。
 
-**👉️进入`manifest.json`文件，点击`Raw`按钮。**
+接下来回到本地，我们在ClassIsland安装目录中新建一个集控配置文件，来告诉ClassIsland实例应该从哪里拉取集控清单。
 
-**👉️在刚刚打开的标签页中，复制地址栏的地址。**
+**👉️在ClassIsland安装文件夹中新建一个文件，并命名为`ManagementPreset.json`，并用本地文本编辑器打开。**
 
-接下来回到本地，我们在刚才的目录中新建一个集控配置文件，来告诉ClassIsland实例应该从哪里拉取集控清单。
+**👉将以下文本粘贴到`ManagementPreset.json`中，并将`ManifestUrlTemplate`字段中用户名部分替换成你的GitHub用户名。**
 
-**👉️在文件夹中新建一个文件，并命名为`ManagementPreset.json`，并用文本编辑器打开。**
-
-**👉将以下文本粘贴到`ManagementPreset.json`中，并将`ManifestUrlTemplate`字段替换成你刚刚复制的链接。**
-
-```json
+```json title="ManagementPreset.json"
 {
     "ManagementServerKind": 0,
     "ManagementServer": "",
-    "ManifestUrlTemplate": "（你刚刚复制的链接）",
+    "ManifestUrlTemplate": "https://raw.githubusercontent.com/（把这里替换成你的GitHub用户名）/classisland-mgmt-cfg/master/manifest.json",
 }
 ```
 
 编辑好集控配置后，我们就可以将这个文件导入到ClassIsland实例中了。
 
-**👉将文件`ManagementPreset.json`复制到ClassIsland程序目录下，然后运行ClassIsland。**
+**👉运行ClassIsland。**
 
 如果您是第一次运行ClassIsland，此时ClassIsland会弹出欢迎向导。
 
 **👉同意许可协议，然后点击【加入集控】按钮。**
 
+![1715487543978](image/tutorial-create-management-config/1715487543978.png)
+
+!!! tip "如果您先前已经完成欢迎向导，您可以[根据此处的文档](index.md#连接到集控服务器)来加入集控。"
+
 此时会弹出集控加入界面，并自动加载了我们刚刚放置在应用目录下的`ManagementPreset.json`文件。您可以点击【浏览】按钮选择其它的配置文件。
+
+![1715487558487](image/tutorial-create-management-config/1715487558487.png)
 
 **👉在ID一栏填入`TEST`**
 
@@ -80,8 +105,64 @@ ID在此处可以标识ClassIsland实例。在后续您可以将自定义id设�
 
 **👉在弹出的确认提示框上，点击【加入】按钮。**
 
+![1715487625695](image/tutorial-create-management-config/1715487625695.png)
+
 **👉在弹出的加入成功提示框上，点击【确定】按钮。**
+
+![1715487641719](image/tutorial-create-management-config/1715487641719.png)
 
 此时应用会重新启动。在重新启动后，进入【应用设置】，您可以看到右上角出现了【由贵单位管理】徽章。
 
-## 
+![1715487682961](image/tutorial-create-management-config/1715487682961.png)
+
+🎉恭喜！您现在已经成功地加入了集控！
+
+## 拉取档案
+
+尽管我们已经成功加入了集控，但目前它还没有任何作用。接下来我们将引入档案配置。
+
+我们为本教程预制了档案文件，这样我们就可以专注于编写集控配置。
+
+回到 GitHub Codespaces 中，我们接下来的操作将在这上面完成。
+
+**👉将[此处]()的文件内容复制到`subjects.json`**
+
+**👉将[此处]()的文件内容复制到`timelayouts.json`**
+
+**👉将[此处]()的文件内容复制到`classplans.json`**
+
+这些文件分别存储了科目、时间表和课表信息。尽管这些文件仍然以ClassIsland档案文件格式存储，但在加载时只会加载相应的部分。您也可以上传并使用自己的档案文件。
+
+**👉在`manifest.json`中添加以下高亮代码，并将所有url中中用户名部分替换成你的GitHub用户名。**
+
+```json title="manifest.json" hl_lines="4-15"
+{
+    "ServerKind": 0,
+    "OrganizationName": "Hello",
+    "ClassPlanSource": {
+        "Value": "https://raw.githubusercontent.com/（把这里替换成你的GitHub用户名）/classisland-mgmt-cfg/master/classplans.json",
+        "Version": 1
+    },
+    "TimeLayoutSource": {
+        "Value": "https://raw.githubusercontent.com/（把这里替换成你的GitHub用户名）/classisland-mgmt-cfg/master/timelayouts.json",
+        "Version": 1
+    },
+    "SubjectsSource": {
+        "Value": "https://raw.githubusercontent.com/（把这里替换成你的GitHub用户名）/classisland-mgmt-cfg/master/subjects.json",
+        "Version": 1
+    }
+}
+```
+
+在我们刚刚添加的内容中，包含了3个url，以及对应url的版本。这些url分别指向我们存储到GitHub仓库上的科目、时间表和课表信息。这些字段被称为[`ReVersionString`](configure.md#reversionstring)，可以存储url和对应url的版本。在ClassIsland拉取清单时，只有在检测到url版本比本地存储的版本更新时，才会更新相关数据。
+
+!!! warning "在修改这些字段的url，或者这些字段的url指向的内容时，请务必记得增加版本数，否则ClassIsland实例可能不会更新这些数据。"
+
+**👉️在编辑器【Git】工具窗口中提交更改。**
+
+**👉️重启ClassIsland实例。**
+
+如果前面的步骤没有差错，ClassIsland会自动拉取档案。您可以在启动应用后，进入【档案编辑】界面，查看拉取的档案。
+
+## 应用url模板
+

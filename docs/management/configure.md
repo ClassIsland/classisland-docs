@@ -132,7 +132,7 @@ https://example.com/client/{cuid}/policy.json -> https://example.com/client/9f5a
 
 ## 策略文件
 
-控制ClassIsland行为的各个策略，详见[策略文件](集控策略文件)。
+控制ClassIsland行为的各个策略，详见[策略文件](policy.md)。
 
 ## 课表、时间表与科目文件
 
