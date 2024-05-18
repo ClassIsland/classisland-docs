@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+
+<!-- Content -->
+{% block content %}
+    <div>
+        <h1>404 - 未找到</h1>
+        <div style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ">
+            <p style="font-size: 64px">
+                :(
+            </p>
+            <p>找不到您请求的文档。可能您输入了错误的url，或者这个文档已经被移动或删除。</p>
+            <a class="md-button md-button--primary" href="/" >返回首页</a>
+        </div>
+    </div>
+{% endblock %}

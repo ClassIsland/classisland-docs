@@ -1,8 +1,10 @@
 site_name: ClassIsland 文档
 repo_url: https://github.com/HelloWRC/ClassIsland
+site_url: https://classisland-docs.readthedocs.io/zh-cn/latest/
 theme:
   name: material
   logo: assets/logo.svg
+  custom_dir: overrides
   favicon: assets/logo.svg
   language: zh
   features:
