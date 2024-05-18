@@ -14,11 +14,11 @@ ClassIsland集控配置文件的参考文档。
 
 | 文件 | 说明 |
 | -- | -- |
-| [集控配置](#集控配置) | 客户端集控配置，存储了集控服务器/集控清单url的相关信息。 |
-| [集控清单](#集控清单) | 包含了要拉取的集控相关文件的信息和组织的相关信息。 |
-| [策略文件](#策略文件) | 控制ClassIsland行为的各个策略。 |
+| [集控配置](#mgmt-configure) | 客户端集控配置，存储了集控服务器/集控清单url的相关信息。 |
+| [集控清单](#mgmt-manifest) | 包含了要拉取的集控相关文件的信息和组织的相关信息。 |
+| [策略文件](#mgmt-policy) | 控制ClassIsland行为的各个策略。 |
 | 应用设置 | ClassIsland的设置。 |
-| [课表、时间表与科目文件](#课表、时间表与科目文件) | 存储课表、时间表与科目信息的文件。 |
+| [课表、时间表与科目文件](#mgmt-profile) | 存储课表、时间表与科目信息的文件。 |
 
 <a id="ReVersionString"></a>
 ## ReVersionString
@@ -41,6 +41,7 @@ ClassIsland集控配置文件的参考文档。
 }
 ```
 
+<a id="mgmt-configure"></a>
 ## 集控配置
 
 客户端集控配置，存储了集控服务器/集控清单url的相关信息。
@@ -54,6 +55,7 @@ ClassIsland集控配置文件的参考文档。
 | `ManifestUrlTemplate` | `string` | 仅当`ManagementServerKind`为0时必填 | 集控清单url模板 | `https://example.com/manifest.json` |
 | `ClassIdentity` | `string` | 否 | 班级标识符 | `1-101` |
 
+<a id="url-template"></a>
 ### url模板
 
 在调用集控清单中的url时，ClassIsland可以根据客户端的信息，将对应信息填入url模板中，实现为每个ClassIsland实例分配特定的对象。
@@ -83,6 +85,7 @@ https://example.com/client/{cuid}/policy.json -> https://example.com/client/9f5a
 }
 ```
 
+<a id="mgmt-manifest"></a>
 ## 集控清单
 
 包含了要拉取的集控相关文件的信息和组织的相关信息。
@@ -130,10 +133,12 @@ https://example.com/client/{cuid}/policy.json -> https://example.com/client/9f5a
 }
 ```
 
+<a id="mgmt-policy"></a>
 ## 策略文件
 
 控制ClassIsland行为的各个策略，详见[策略文件](policy.md)。
 
+<a id="mgmt-profile"></a>
 ## 课表、时间表与科目文件
 
 存储课表、时间表与科目信息的文件，格式为档案文件格式。

@@ -52,6 +52,8 @@ nav:
   #   - app/Basic.md
   - 集控:
     - management/index.md
+    - management/client-identify.md
+    - management/connect-to-mgmt-server.md
     - management/configure.md
     - management/policy.md
     - management/tutorial-create-management-config.md
