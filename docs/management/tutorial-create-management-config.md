@@ -14,7 +14,7 @@
 
 我们需要在本地安装一个ClassIsland实例来测试集控。
 
-**👉️按照指示[下载并安装ClassIsland本体](**👉️在GitHub上[新建一个公开存储库](https://github.com/new)，并命名为`classisland-mgmt-cfg`。**)。**
+**👉️按照指示[下载并安装ClassIsland本体](https://github.com/HelloWRC/ClassIsland?tab=readme-ov-file#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8)。**
 
 !!! tip "如果您之前安装过 ClassIsland，建议您在另一位置安装一个新的实例，并在新的实例中完成本教学的内容。"
 
