@@ -1,5 +1,5 @@
 site_name: ClassIsland 文档
-repo_url: https://github.com/HelloWRC/ClassIsland
+repo_url: https://github.com/ClassIsland/ClassIsland
 site_url: https://docs.classisland.tech/zh-cn/latest/
 theme:
   name: material
