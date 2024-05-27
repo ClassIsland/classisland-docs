@@ -75,7 +75,7 @@
 {
     "ManagementServerKind": 0,
     "ManagementServer": "",
-    "ManifestUrlTemplate": "https://raw.githubusercontent.com/（把这里替换成你的GitHub用户名）/classisland-mgmt-cfg/master/manifest.json",
+    "ManifestUrlTemplate": "https://raw.githubusercontent.com/（把这里替换成你的GitHub用户名）/classisland-mgmt-cfg/master/manifest.json"
 }
 ```
 
