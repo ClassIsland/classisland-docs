@@ -54,8 +54,15 @@ extra:
     property: foobar 
 nav:
   - 首页: index.md
-  # - 应用帮助:
-  #   - app/Basic.md
+  - 应用帮助:
+    - app/index.md
+    - app/Basic.md
+    - app/ProfileSettingsPage.md
+    - app/ClassPlan.md
+    - app/TimeLayout.md
+    - app/Subject.md
+    - app/Notifications.md
+    - app/Advanced.md
   - 集控:
     - management/index.md
     - management/client-identify.md

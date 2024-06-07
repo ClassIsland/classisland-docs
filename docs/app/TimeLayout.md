@@ -4,7 +4,7 @@
 
 当使用了该时间表的课表启用时，会在主界面上显示所有的时间点，并根据系统时间展开显示当前的时间点。
 
-![1690343735712](pack://application:,,,/ClassIsland;component/Assets/Documents/image/TimeLayout/1690343735712.png)
+![1690343735712](image/TimeLayout/1690343735712.png)
 
 时间点具有以下类型：
 
@@ -18,9 +18,9 @@
 
 ## 编辑时间表
 
-> **你无法编辑已启用的课表使用的活动的时间表。**
+!!! note "**你无法编辑已启用的课表使用的活动的时间表。**"
 
-![1690343828036](pack://application:,,,/ClassIsland;component/Assets/Documents/image/TimeLayout/1690343828036.png)
+![1690343828036](image/TimeLayout/1690343828036.png)
 
 我们来了解如何编辑时间表。
 
@@ -30,25 +30,23 @@
 
 点击【新建时间表】可以新建一个时间表。您也可以点击界面右上角的【从表格导入…】按钮来直接从表格导入时间表。
 
-![1704962385766](pack://application:,,,/ClassIsland;component/Assets/Documents/image/TimeLayout/1704962385766.png)
+![1704962385766](image/TimeLayout/1704962385766.png)
 
 ### 添加时间点
 
 点击工具栏中添加时间点的按钮可以直接添加对应类型的时间点。默认情况下，添加的时间点的开始和结束时间会被设定为当前时间。如果选中了时间点，那么添加的时间点会被插入到选中的时间点后方。
 
-![1704962437551](pack://application:,,,/ClassIsland;component/Assets/Documents/image/TimeLayout/1704962437551.png)
+![1704962437551](image/TimeLayout/1704962437551.png)
 
 新插入的上课类型时间点默认长40分钟，课间休息时间点默认长10分钟。您可以在应用设置中修改这个默认值。
 
-![1707463956987](pack://application:,,,/ClassIsland;component/Assets/Documents/image/TimeLayout/1707463956987.png)
+![1707463956987](image/TimeLayout/1707463956987.png)
 
 ### 编辑时间点
 
 选中的时间点详细信息会显示在视图右侧，您可以在此处修改选中的时间点的详细信息。
 
 在使用时间轴视图时，您可以在选中时间点后，直接拖动开始和结束处的把柄来修改对应的时间。您可以点击右下角处的按钮来缩放视图。
-
-> Tips: 在触摸设备中，您可以通过开关工具栏上移动模式的开关来切换编辑模式和滚动模式。编辑模式下，无法通过触摸滑动直接滚动时间表视图。在滚动模式下，可以直接通过触摸滑动来滚动时间表视图，但无法通过拖动时间点把柄来编辑时间点。
 
 每个上课类型的时间点，在对应的课表中对应一节课程，可以设置上课的科目。在主界面上，默认会显示所有上课类型的时间点，而课间休息类型的时间点只会在处于该时间点时才会显示。您可以为这个时间点设置该时间点的默认科目，也可以一键覆盖所有课表中对应时间点的科目。
 
@@ -62,10 +60,10 @@
 
 您可以通过【时间表信息】按钮查看并编辑时间表的基本信息，如名称等（如下图）。
 
-![1690344105820](pack://application:,,,/ClassIsland;component/Assets/Documents/image/TimeLayout/1690344105820.png)
+![1690344105820](image/TimeLayout/1690344105820.png)
 
 ### 删除时间表
 
 点击工具栏中【删除时间表】按钮即可删除时间表。删除时间表时，时间表必须没有被任何课表使用，否则将无法删除。
 
-![1707455170854](pack://application:,,,/ClassIsland;component/Assets/Documents/image/TimeLayout/1707455170854.png)
+![1707455170854](image/TimeLayout/1707455170854.png)
