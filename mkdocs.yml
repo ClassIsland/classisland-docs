@@ -5,7 +5,7 @@ theme:
   name: material
   logo: assets/logo.svg
   custom_dir: overrides
-  favicon: assets/logo.svg
+  favicon: assets/favicon.ico
   language: zh
   features:
     - content.code.copy
