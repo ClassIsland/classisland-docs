@@ -70,4 +70,4 @@ nav:
     - management/configure.md
     - management/policy.md
     - management/tutorial-create-management-config.md
-  - 插件开发: plugins/index.md
+  - 开发文档: dev/index.md
