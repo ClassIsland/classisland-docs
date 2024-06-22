@@ -70,4 +70,10 @@ nav:
     - management/configure.md
     - management/policy.md
     - management/tutorial-create-management-config.md
-  - 开发文档: dev/index.md
+  - 开发文档: 
+    - dev/index.md
+    - 开始:
+      - dev/get-started/devlopment.md
+      - dev/get-started/devlopment-plugins.md
+    - dev/components.md
+    - dev/events.md
