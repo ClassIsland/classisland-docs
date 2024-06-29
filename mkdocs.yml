@@ -1,6 +1,9 @@
 site_name: ClassIsland 文档
 repo_url: https://github.com/ClassIsland/ClassIsland
 site_url: https://docs.classisland.tech/zh-cn/latest/
+plugins:
+  - glightbox
+  - search
 theme:
   name: material
   logo: assets/logo.svg
@@ -16,6 +19,7 @@ theme:
     - navigation.instant.progress
     - navigation.tabs
     - navigation.top
+    - content.tabs.link
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -36,6 +40,10 @@ theme:
         icon: material/weather-night
         name: 切换到系统主题
 markdown_extensions:
+  - pymdownx.tabbed:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -61,6 +69,7 @@ markdown_extensions:
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower
+  - md_in_html
 extra:
   analytics:
     provider: custom
