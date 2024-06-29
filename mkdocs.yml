@@ -13,6 +13,9 @@ theme:
     - content.code.copy
     - content.code.annotate 
     - navigation.footer 
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.top
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -73,13 +76,13 @@ nav:
   - 首页: index.md
   - 应用帮助:
     - app/index.md
-    - app/Basic.md
-    - app/ProfileSettingsPage.md
-    - app/ClassPlan.md
-    - app/TimeLayout.md
-    - app/Subject.md
-    - app/Notifications.md
-    - app/Advanced.md
+    - app/basic.md
+    - app/profile-settings-page.md
+    - app/classplan.md
+    - app/time-layout.md
+    - app/subject.md
+    - app/notifications.md
+    - app/advanced.md
   - 集控:
     - management/index.md
     - management/client-identify.md

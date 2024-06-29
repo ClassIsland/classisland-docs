@@ -20,9 +20,9 @@ graph TD
 
 您可以阅读以下文章来详细了解档案编辑器的使用方法：
 
-- [课表](ClassPlan.md)
-- [时间表](TimeLayout.md)
-- [科目](Subject.md)
+- [课表](classplan.md)
+- [时间表](time-layout.md)
+- [科目](subject.md)
 
 ## 打开档案编辑器
 
