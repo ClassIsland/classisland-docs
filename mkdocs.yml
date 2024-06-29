@@ -8,24 +8,30 @@ theme:
   favicon: assets/favicon.ico
   language: zh
   features:
+    - navigation.instant
+    - navigation.indexes 
     - content.code.copy
-    - content.code.annotate  
+    - content.code.annotate 
+    - navigation.footer 
   palette:
-    # Toggle light mode
-    - scheme: default
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: 切换到浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
       accent: indigo
       toggle:
         icon: material/weather-sunny
-        name: 浅色模式
-
-    # Toggle dark mode
-    - scheme: slate
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: black
-      accent: black
+      accent: indigo
       toggle:
         icon: material/weather-night
-        name: 深色模式
+        name: 切换到系统主题
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
@@ -48,10 +54,21 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
 extra:
   analytics:
     provider: custom
     property: foobar 
+  social:
+    - icon: material/web
+      link: https://classisland.tech/
+    - icon: fontawesome/brands/github
+      link: https://github.com/ClassIsland
+    - icon: fontawesome/brands/qq
+      link: https://qm.qq.com/q/7BWNv3FcjK
 nav:
   - 首页: index.md
   - 应用帮助:
@@ -75,5 +92,7 @@ nav:
     - 开始:
       - dev/get-started/devlopment.md
       - dev/get-started/devlopment-plugins.md
-    - dev/components.md
+    - dev/basics.md
     - dev/events.md
+    - dev/uri-navigation.md
+    - dev/components.md
