@@ -10,7 +10,7 @@ ClassIsland 使用了如下技术栈。在参与 ClassIsland 开发或为 ClassI
 - 本项目使用了 WPF 作为 UI 框架，并使用了 [MaterialDesignInXamlToolkit](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit) 主题。
 - 本项目使用了控制反转（IoC）容器[Microsoft.Extensions.Hosting](https://learn.microsoft.com/zh-cn/dotnet/core/extensions/generic-host)作为依赖注入的实现。
 
-这里有一些比较重要的开发资源供您参考：
+**在开发时您可以参考以下的资源：**
 
 - 本开发文档；
 - [ClassIsland 源代码](https://github.com/ClassIsland/ClassIsland)：ClassIsland 源码在开发插件时还是很有参考价值的，可以增加对 API 的理解。
@@ -41,8 +41,9 @@ ClassIsland 使用了如下技术栈。在参与 ClassIsland 开发或为 ClassI
 - **开始**
     - [配置 ClassIsland **本体**开发环境](./get-started/devlopment.md)
     - [配置 ClassIsland **插件**开发环境](./get-started/devlopment-plugins.md)
+- [基础知识](basics.md)
 - [事件](events.md)
-- Url 导航
+- [Uri 导航](uri-navigation.md)
 - 内置控件
 - [组件](components.md)
 - 提醒
