@@ -2,7 +2,8 @@
 
 组件是在 ClassIsland 主界面上显示信息的单元，若干个组件可以组成 ClassIsland 主界面上显示的内容。您可以通过开发组件的方式，丰富 ClassIsland 的主界面。
 
-!!! info "这篇文章主要讲述如何开发组件。如果您只是要调整主界面组件的普通用户，请参考[这篇文章](../app/components.md)。"
+!!! info
+    这篇文章主要讲述如何开发组件。如果您只是要调整主界面组件的普通用户，请参考[这篇文章](../app/components.md)。
 
 ## 定义组件
 
@@ -101,7 +102,8 @@ public partial class MyComponent : ComponentBase<MySettingsClass>
 
 这种带了类型参数的 `ComponentBase` 包含一个类型为传入的类型参数 `Settings` 属性，存储了当前组件的设置，并且会在组件**初始化完成后**自动加载。
 
-!!! warning "不要在构造函数和`OnInitialized`方法中访问`Settings`属性。此时`Settings`属性尚未初始化，会返回`null`值。"
+!!! warning
+    不要在构造函数和`OnInitialized`方法中访问`Settings`属性。此时`Settings`属性尚未初始化，会返回`null`值。
 
 然后以与定义组件类似的方法定义组件设置控件。**组件设置控件不需要再填写注册信息。**
 
@@ -137,3 +139,5 @@ public void OnServiceConfiguring(HostBuilderContext context, IServiceCollection 
     // ...
 }
 ```
+
+您可以在[【应用设置】->【组件】](classisland://app/settings/components)中查看设置控件效果。

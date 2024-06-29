@@ -1,8 +1,8 @@
 # Uri 导航
 
-ClassIsland 支持通过 Uri 进行应用内导航和从应用外部拉起应用，并提供了相应的命令在界面上处理超链接中的 Uri。
+ClassIsland 支持通过 Uri 进行应用内导航，同时也支持注册系统 Url 协议，从应用外部打开特定的 Uri。
 
-本文将介绍如何通过 `UriNavigationService` 来注册您自定义的 Uri 和导航事件处理方法来处理导航，以及如何在上通过命令和直接调用导航服务进行导航。
+本文将介绍如何通过 `UriNavigationService` 来注册您自定义的 Uri 和导航事件处理方法来处理导航，以及如何在 UI 上通过命令和直接调用导航服务进行导航。
 
 ClassIsland 的 Uri 导航协议是 `classisland://`。
 
@@ -13,23 +13,23 @@ ClassIsland 的 Uri 导航协议是 `classisland://`。
 !!! info
     在本文的代码中，我们假定将获取到的服务存储在了属性 `UriNavigationService` 中。
 
-接下来我们注册路径 `hello_world/hello_world` 的处理程序：
+接下来我们注册路径 `foo/bar` 的处理程序：
 
 ```cs
 UriNavigationService.HandlePluginsNavigation(
-    "hello_world/hello_world", 
+    "foo/bar", 
     args => {
-        CommonDialog.ShowInfo($"Hello world!");
+        CommonDialog.ShowInfo($"Hello world! {args.Uri}");
     }
 );
 ```
 
-在上面的代码中，使用 `HandlePluginsNavigation` 方法注册的 Uri 的主机默认是 `plugins`，也就是专门为插件预留的导航主机。如果要注册到 `app` 或其他主机下，请使用 `HandleAppNavigation` 方法。
+在上面的代码中，我们使用 `HandlePluginsNavigation` 方法注册了处理导航到路径 `foo/bar` 的处理程序。当导航到这个 Uri `classisland://plugins/foo/bar` 时，会运行传入的处理程序，显示对话框。在事件处理程序中可以通过参数 `args` 获取原始导航的 Uri 和原始 Uri 相对当前注册的路径的子路径。
+
+使用 `HandlePluginsNavigation` 方法注册的 Uri 的主机是 `plugins`，也就是专门为插件预留的导航主机。如果要注册到 `app` 或其他主机下，请使用 `HandleAppNavigation` 方法。
 
 !!! note
     `HandleAppNavigation`等方法具有 `internal` 保护，只有从 ClassIsland 内部才能注册到 `app` 和自定义主机下。插件中只能使用 `HandlePluginsNavigation` 方法注册到 `plugins` 主机下。
-
-接下来运行 ClassIsland。当导航到 `classisland://plugins/hello_world/hello_world`时，会弹出对话框“Hello world!”。这代表在上面代码中已经成功注册了 Uri。
 
 ## 导航
 
@@ -52,7 +52,7 @@ flowchart LR
 !!! info
     待补充。
 
-### 通过后端调用导航方法
+### 通过代码导航
 
 调用 `IUriNavigationService.Navigate` 方法可以导航到指定的 Uri。如果要导航的 Uri 协议不是 `classisland://`，ClassIsland 会自动调用系统中最合适的应用处理这个 Uri。
 
@@ -64,7 +64,7 @@ UriNavigationService.Navigate(new Uri("classisland://app/test"));
 UriNavigationService.Navigate(new Uri("https://classisland.tech"));
 ```
 
-### 从外部应用调用
+### 从外部调用
 
 如果 ClassIsland 在系统上注册了 `classisland://` 链接的打开方式，那么在浏览器等地方打开这种协议的链接时，ClassIsland 可以在应用中导航到对应的 Uri 处理程序上。
 
