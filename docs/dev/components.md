@@ -49,7 +49,6 @@ public partial class MyComponent : ComponentBase
 
 您也可以为您的组件指定图标和描述，它们会在组件设置页面中显示。例如：
 
-
 ``` csharp hl_lines="4-5"
 [ComponentInfo(
     "66164856-794B-4243-87C2-78EFD3F49E7C",
@@ -76,7 +75,6 @@ public void OnServiceConfiguring(HostBuilderContext context, IServiceCollection 
 ## 组件设置
 
 有时组件需要提供一些设置选项，供用户进行自定义。主界面上每个摆放的组件的设置相互独立。`ComponentBase` 封装了一套设置提供方案，只需要为组件继承的 `ComponentBase` 基类添加对应设置模型的类型参数即可。
-
 
 ``` xml title="MyComponent.xaml" hl_lines="2"
 <ci:ComponentBase 

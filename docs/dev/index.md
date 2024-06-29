@@ -6,7 +6,7 @@
 
 ClassIsland 使用了如下技术栈。在参与 ClassIsland 开发或为 ClassIsland 开发插件等配套工具时，您最好对以下内容有基本的了解。
 
-- 本项目基于 .NET 8 开发。 
+- 本项目基于 .NET 8 开发。
 - 本项目使用了 WPF 作为 UI 框架，并使用了 [MaterialDesignInXamlToolkit](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit) 主题。
 - 本项目使用了控制反转（IoC）容器[Microsoft.Extensions.Hosting](https://learn.microsoft.com/zh-cn/dotnet/core/extensions/generic-host)作为依赖注入的实现。
 
@@ -19,18 +19,16 @@ ClassIsland 使用了如下技术栈。在参与 ClassIsland 开发或为 ClassI
 
 如果您打算向 ClassIsland 做出代码贡献，**请务必先阅读 [贡献指南](https://github.com/ClassIsland/ClassIsland/blob/master/CONTRIBUTING.md)。**
 
-<a id="get-started"></a>
 ## 开始
 
 - [配置 ClassIsland **本体**开发环境](./get-started/devlopment.md)
 - [配置 ClassIsland **插件**开发环境](./get-started/devlopment-plugins.md)
 
-<a id="debug-menu"></a>
 ## 调试菜单
 
 !!! danger "**注意！** 调试菜单中的功能仅供测试使用，如果您不知道您在做什么，请不要随意使用！"
 
-在[【应用设置】→【关于】](classisland://app/settings/about)中连续点击应用图标10次，即可开启[调试](classisland://app/settings/debug)和[笔刷](classisland://app/settings/debug_brushes)界面。
+在[【应用设置】→【关于】](classisland://app/settings/about)中连续点击应用图标 10 次，即可开启[调试](classisland://app/settings/debug)和[笔刷](classisland://app/settings/debug_brushes)界面。
 
 ## 目录
 
@@ -39,8 +37,8 @@ ClassIsland 使用了如下技术栈。在参与 ClassIsland 开发或为 ClassI
 本章节包含以下内容：
 
 - **开始**
-    - [配置 ClassIsland **本体**开发环境](./get-started/devlopment.md)
-    - [配置 ClassIsland **插件**开发环境](./get-started/devlopment-plugins.md)
+  - [配置 ClassIsland **本体**开发环境](./get-started/devlopment.md)
+  - [配置 ClassIsland **插件**开发环境](./get-started/devlopment-plugins.md)
 - [基础知识](basics.md)
 - [事件](events.md)
 - [Uri 导航](uri-navigation.md)

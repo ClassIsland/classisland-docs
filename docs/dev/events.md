@@ -4,7 +4,6 @@
 
 .NET 通用主机和 ClassIsland 提供了一系列的事件，您可以通过调取对应的服务等方式订阅这些事件。
 
-<a id="lifecycle"></a>
 ## 生命周期
 
 以下是 ClassIsland 的生命周期及事件触发的示意图：
@@ -23,13 +22,10 @@ flowchart TD
     PostMainTimerTick --> Exit["应用退出"]
 ```
 
-<a id="loop-events"></a>
 ## 主计时器事件
 
 这些事件会每隔 50ms 触发一次，适用于进行轮询操作。
 
-
-<a id="e-PreMainTimerTick"></a>
 ### 课表处理前事件
 
 在主计时器开始处理课表信息前触发。
@@ -40,8 +36,6 @@ flowchart TD
 
 **参数：** *无*
 
-
-<a id="e-PostMainTimerTick"></a>
 ### 课表处理后事件
 
 在主计时器完成处理课表信息后触发。
@@ -52,14 +46,10 @@ flowchart TD
 
 **参数：** *无*
 
-
-<a id="lesson-events"></a>
 ## 课表事件
 
 以下事件会在课表的对应状态触发。
 
-
-<a id="e-OnClass"></a>
 ### 上课事件
 
 当进入上课类型的时间点时触发。
@@ -70,8 +60,6 @@ flowchart TD
 
 **参数：** *无*
 
-
-<a id="e-OnBreakingTime"></a>
 ### 下课事件
 
 当进入课间休息类型的时间点时触发。
@@ -82,8 +70,6 @@ flowchart TD
 
 **参数：** *无*
 
-
-<a id="e-OnAfterSchool"></a>
 ### 放学事件
 
 当放学（当前时间超出今天的时间表的最后一个时间点）时触发。
@@ -94,8 +80,6 @@ flowchart TD
 
 **参数：** *无*
 
-
-<a id="e-CurrentTimeStateChanged"></a>
 ### 时间状态改变事件
 
 当当前时间状态改变时触发。

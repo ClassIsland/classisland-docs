@@ -3,6 +3,7 @@
 本文将介绍在进行 ClassIsland 相关开发时需要了解的一部分基础概念。
 
 <a id="xml-namespace"></a>
+
 ## XML 命名空间
 
 在 XAML 中使用程序集 `ClassIsland.Core` 下封装的一些控件时，需要引入对应的 XML 命名空间，如下方代码所示：
@@ -36,9 +37,9 @@
 ```
 
 <a id="dependency-injection"></a>
+
 ## 依赖注入
 
 ClassIsland 使用了依赖注入设计模式。在定义一个服务时，您可以在服务的构造函数参数中指定要引用的服务依赖项，主机会在构造服务时自动传入依赖项。
 
-要了解关于依赖注入的更多内容，请参阅[ .NET 依赖项注入](https://learn.microsoft.com/zh-cn/dotnet/core/extensions/dependency-injection)。这篇文档会更详细地介绍 .NET 中依赖注入的相关信息。
-
+要了解关于依赖注入的更多内容，请参阅[.NET 依赖项注入](https://learn.microsoft.com/zh-cn/dotnet/core/extensions/dependency-injection)。这篇文档会更详细地介绍 .NET 中依赖注入的相关信息。
