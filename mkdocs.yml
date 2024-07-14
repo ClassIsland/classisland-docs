@@ -92,6 +92,7 @@ nav:
     - app/subject.md
     - app/notifications.md
     - app/advanced.md
+    - app/troubleshooting.md
   - 集控:
     - management/index.md
     - management/client-identify.md
@@ -108,3 +109,5 @@ nav:
     - dev/events.md
     - dev/uri-navigation.md
     - dev/components.md
+  - 社区: 
+    - community/contributing.md
