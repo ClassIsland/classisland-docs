@@ -4,6 +4,7 @@ site_url: https://docs.classisland.tech/zh-cn/latest/
 plugins:
   - glightbox
   - search
+copyright: 本文档以 CC BY-NC-SA 4.0 许可协议授权。
 theme:
   name: material
   logo: assets/logo.svg
