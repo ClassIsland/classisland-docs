@@ -7,7 +7,7 @@
 
 ## 定义组件
 
-组件实质上是 WPF 的用户控件，所以我们需要先创建一个用户控件。在创建好用户空间之后，修改如下高亮内容，将控件的基类修改成组件基类 `ComponentBase`：
+组件实质上是 WPF 的用户控件，所以我们需要先创建一个用户控件。在创建好用户控件之后，修改如下高亮内容，将控件的基类修改成组件基类 `ComponentBase`：
 
 ``` xml title="MyComponent.xaml" hl_lines="1-2 8"
 <ci:ComponentBase 
