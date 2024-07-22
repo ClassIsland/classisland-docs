@@ -92,6 +92,7 @@ nav:
     - app/time-layout.md
     - app/subject.md
     - app/notifications.md
+    - app/uri-navigation.md
     - app/advanced.md
     - app/troubleshooting.md
   - 集控:

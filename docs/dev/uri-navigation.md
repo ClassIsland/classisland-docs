@@ -1,4 +1,7 @@
-# Uri 导航
+# 开发 Uri 导航
+
+!!! info
+    本文章主要讲述开发人员如何注册自定义的 Uri 导航。如果您想了解应用内置的 Uri 导航路径，请参阅[Uri 导航](../app/uri-navigation.md)。
 
 ClassIsland 支持通过 Uri 进行应用内导航，同时也支持注册系统 Url 协议，从应用外部打开特定的 Uri。
 
