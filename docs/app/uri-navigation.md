@@ -70,6 +70,9 @@ classisland://app/class-swap
 
 打开换课窗口。
 
+!!! note
+    在当前没有加载课表时，此 Uri 不起作用。
+
 ### 测试导航
 
 ``` plaintext
