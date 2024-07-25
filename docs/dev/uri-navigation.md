@@ -50,10 +50,18 @@ flowchart LR
 
 以下有几种进行导航的方式：
 
-### 通过 `Hyperlink`
+### 通过 `NavHyperlink`
 
-!!! info
-    待补充。
+`NavHyperlink` 继承于 `Hyerlink`，具有后者类似的外观与体验，可以插入到 `TextBlock` 或 `FlowDocument` 等中，实现 Uri 导航。
+
+要使用 `NavHyperlink` 导航，需要将 `NavigateTarget` 属性设置为要导航到的 Uri，例如：
+
+``` xml
+<TextBlock>
+    <ci:NavHyperlink NavigateTarget="https://cn.bing.com">Test link 1</ci:NavHyperlink>
+    <ci:NavHyperlink NavigateTarget="classisland://app/test">Test link 2</ci:NavHyperlink>
+</TextBlock>
+```
 
 ### 通过代码导航
 
