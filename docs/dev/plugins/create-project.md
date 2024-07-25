@@ -155,3 +155,7 @@ public class Plugin : PluginBase
 ![1721874637367](image/create-project/1721874637367.png)
 
 🎉恭喜！您成功创建了您的第一个插件！
+
+## 继续深入
+
+您可以继续阅读文章来进一步了解相关 API 的用法，或者查看 GitHub 上的 [插件示例](https://github.com/ClassIsland/ExamplePlugins)。
