@@ -109,6 +109,7 @@ nav:
       - dev/get-started/devlopment-plugins.md
     - 插件:
       - dev/plugins/create-project.md
+      - dev/plugins/basics.md
     - dev/basics.md
     - dev/events.md
     - dev/uri-navigation.md

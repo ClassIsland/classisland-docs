@@ -132,6 +132,35 @@ public class Plugin : PluginBase
 !!! tip
     您还可以在 `Initialize` 中完成相关服务的注册，详细信息请见[此文章](../basics.md#依赖注入)。
 
+## 配置主题
+
+在插件中引入控件样式需要指定默认主题字典。
+
+新建 `AssemblyInfo.cs`，并写入以下内容，指定主题资源字典的位于当前程序集：
+
+``` csharp title="AssemblyInfo.cs"
+using System.Windows;
+
+[assembly: ThemeInfo(
+    ResourceDictionaryLocation.None, 
+    ResourceDictionaryLocation.SourceAssembly
+)]
+```
+
+!!! note
+    关于此属性的详细用法，请见[文档](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.themeinfoattribute?view=windowsdesktop-8.0)。
+
+创建 `Theme/Generic.xaml`，并写入以下内容，引用主题资源字典：
+
+``` xml title="Themes/Generic.xaml"
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/ClassIsland.Core;;;component/ThemeBase.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
+```
+
 ## 配置启动项目
 
 需要以 ClassIsland 本体为载体以运行和调试插件。
