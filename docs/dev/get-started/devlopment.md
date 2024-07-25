@@ -10,6 +10,7 @@
 
 - [.NET 8.0 SDK](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
 - [Visual Studio 2022](https://visualstudio.microsoft.com/)，包括【.NET 桌面开发】工作负载
+- [Git](https://git-scm.com/)
 
 ## 拉取代码
 
