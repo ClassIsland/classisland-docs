@@ -54,6 +54,7 @@ ClassIsland 集控配置文件的参考文档。
 | -- | -- | -- | -- | -- |
 | `ManagementServerKind` | `int` | **是** | 集控服务器类型。（`0`：静态托管的配置文件；`1`：集控服务器） | `0` |
 | `ManagementServer` | `string` | 仅当`ManagementServerKind`为 1 时必填 | 集控服务器地址 | `https://example.com:23333` |
+| `ManagementServerGrpc` | `string` | 仅当`ManagementServerKind`为 1 时必填 | 集控服务器Grpc通讯地址 | `https://example.com:23333` |
 | `ManifestUrlTemplate` | `string` | 仅当`ManagementServerKind`为 0 时必填 | 集控清单 url 模板 | `https://example.com/manifest.json` |
 | `ClassIdentity` | `string` | 否 | 班级标识符 | `1-101` |
 
@@ -63,6 +64,7 @@ ClassIsland 集控配置文件的参考文档。
 {
     "ManagementServerKind": 0,
     "ManagementServer": "",
+    "ManagementServerGrpc": "",
     "ManifestUrlTemplate": "https://example.com/manifest.json",
     "ClassIdentity": "TEST"
 }
