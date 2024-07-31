@@ -6,6 +6,7 @@
 
 您可以通过阅读本帮助文档来快速上手本应用。建议您按照以下顺序学习软件的基本功能：
 
+- [安装与开始](setup.md)
 - [基本](basic.md)
 - [档案设置](profile-settings-page.md)
 - [课表](classplan.md)

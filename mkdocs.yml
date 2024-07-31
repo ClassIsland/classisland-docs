@@ -60,8 +60,16 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: ClassIsland
+      repo: ClassIsland
   - attr_list
   - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -86,6 +94,7 @@ nav:
   - 首页: index.md
   - 应用帮助:
     - app/index.md
+    - app/setup.md
     - app/basic.md
     - app/profile-settings-page.md
     - app/classplan.md
