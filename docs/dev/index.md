@@ -42,6 +42,7 @@ ClassIsland 使用了如下技术栈。在参与 ClassIsland 开发或为 ClassI
 - **插件**
     - [开始编写插件](./plugins/create-project.md)
     - [插件基础知识](./plugins/basics.md)
+    - [发布插件](./plugins/publishing.md)
 - [基础知识](basics.md)
 - [事件](events.md)
 - [Uri 导航](uri-navigation.md)

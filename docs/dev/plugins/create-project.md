@@ -70,6 +70,7 @@
 | name | `string` | 否 | 插件显示名称 |
 | description | `string` | 否 | 插件描述 |
 | url | `string` | 否 | 插件主页 Url |
+| author | `string` | 否 | 插件作者 |
 | icon | `string` | 否 | 插件图标文件名，默认值为`icon.png` |
 | readme | `string` | 否 | 插件自述文件文件名，默认为`README.md` |
 
@@ -81,6 +82,7 @@ name: Hello world!  # 插件名称
 description: 在启动时弹出一个“Hello world”提示框。  # 插件描述
 entranceAssembly: "HelloWorldPlugin.dll"  # 插件入口程序集
 url: https://github.com/ClassIsland/ExamplePlugins  # 插件 Url
+author: HelloWRC  # 插件作者
 ```
 
 ## 插件入口点
@@ -130,7 +132,7 @@ public class Plugin : PluginBase
 ```
 
 !!! tip
-    您还可以在 `Initialize` 中完成相关服务的注册，详细信息请见[此文章](../basics.md#依赖注入)。
+    您还可以在 `Initialize` 中完成相关服务的注册，详细信息请见[此文章](./basics.md#依赖注入)。
 
 ## 配置主题
 
@@ -150,7 +152,7 @@ using System.Windows;
 !!! note
     关于此属性的详细用法，请见[文档](https://learn.microsoft.com/zh-cn/dotnet/api/system.windows.themeinfoattribute?view=windowsdesktop-8.0)。
 
-创建 `Theme/Generic.xaml`，并写入以下内容，引用主题资源字典：
+创建 `Themes/Generic.xaml`，并写入以下内容，引用主题资源字典：
 
 ``` xml title="Themes/Generic.xaml"
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
