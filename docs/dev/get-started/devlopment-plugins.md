@@ -55,10 +55,10 @@ git checkout dev    # 签出到 dev 分支
 # git checkout 1.4.3.0
 ```
 
-然后构建 ClassIsland：
+然后在 Powershell 运行以下命令构建 ClassIsland：
 
-``` shell
-dotnet build -c Debug
+``` powershell
+dotnet build -c Debug -p:Version=$(git describe --tags --abbrev=0)
 ```
 
 这样就获得了 ClassIsland 的 Debug 构建。构建默认输出在 `（项目文件夹\ClassIsland\bin\Debug\net8.0-windows）`下。

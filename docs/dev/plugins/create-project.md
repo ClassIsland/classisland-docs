@@ -67,10 +67,12 @@
 | -- | -- | -- | -- |
 | id | `string` | **是** | 插件的唯一 id |
 | entranceAssembly | `string` | **是** | 插件入口程序集。在加载插件时将从这个程序集中查找插件入口点。 |
+| apiVersion | `Version` | **是** | 此插件面向的 ClassIsland 版本。此插件将只能在高于此版本的 ClassIsland 上工作。 |
 | name | `string` | 否 | 插件显示名称 |
 | description | `string` | 否 | 插件描述 |
 | url | `string` | 否 | 插件主页 Url |
 | author | `string` | 否 | 插件作者 |
+| version | `Version` | 否 | 插件版本，如`1.0.0.0` |
 | icon | `string` | 否 | 插件图标文件名，默认值为`icon.png` |
 | readme | `string` | 否 | 插件自述文件文件名，默认为`README.md` |
 
@@ -79,10 +81,12 @@
 ```yaml title="manifest.yml"
 id: examples.helloworld  # 插件 id
 name: Hello world!  # 插件名称
+apiVersion: 1.4.2.0  # 插件面向的 ClassIsland 版本
 description: 在启动时弹出一个“Hello world”提示框。  # 插件描述
 entranceAssembly: "HelloWorldPlugin.dll"  # 插件入口程序集
 url: https://github.com/ClassIsland/ExamplePlugins  # 插件 Url
 author: HelloWRC  # 插件作者
+version: 1.0.0.0  # 插件版本
 ```
 
 ## 插件入口点
