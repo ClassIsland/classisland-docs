@@ -48,7 +48,9 @@ public partial class MyComponent : ComponentBase
 }
 ```
 
-您也可以为您的组件指定图标和描述，它们会在组件设置页面中显示。例如：
+上面的代码声明了组件的 GUID 和名称。在加载组件配置时，会通过 GUID 进行识别。组件名称会在组件设置页面中显示。
+
+您也可以通过修改 `ComponentInfo` 属性，为您的组件指定图标和描述，它们会在组件设置页面中显示。例如：
 
 ``` csharp hl_lines="4-5"
 [ComponentInfo(
@@ -77,6 +79,8 @@ public void OnServiceConfiguring(HostBuilderContext context, IServiceCollection 
 
 有时组件需要提供一些设置选项，供用户进行自定义。主界面上每个摆放的组件的设置相互独立。`ComponentBase` 封装了一套设置提供方案，只需要为组件继承的 `ComponentBase` 基类添加对应设置模型的类型参数即可。
 
+假设组件的设置模型类名为 `MySettingsClass`，那么我们需要在 XAML 中加入泛型参数 `x:TypeArguments="MySettingsClass"` ，如：
+
 ``` xml title="MyComponent.xaml" hl_lines="2"
 <ci:ComponentBase 
     x:TypeArguments="MySettingsClass"
@@ -89,6 +93,8 @@ public void OnServiceConfiguring(HostBuilderContext context, IServiceCollection 
 </ci:ComponentBase>
 ```
 
+同时别忘了修改后端代码的声明：
+
 ``` cs title="MyComponent.xaml.cs" hl_lines="2"
 // ...
 public partial class MyComponent : ComponentBase<MySettingsClass>
@@ -100,7 +106,7 @@ public partial class MyComponent : ComponentBase<MySettingsClass>
 }
 ```
 
-这种带了类型参数的 `ComponentBase` 包含一个类型为传入的类型参数 `Settings` 属性，存储了当前组件的设置，并且会在组件**初始化完成后**自动加载。
+这种带了类型参数的 `ComponentBase` 包含一个类型为传入的类型参数 `Settings` 属性，存储了当前组件的设置，并且会在组件 __初始化完成后__ 自动加载。
 
 !!! warning
     不要在构造函数和`OnInitialized`方法中访问`Settings`属性。此时`Settings`属性尚未初始化，会返回`null`值。
@@ -130,7 +136,7 @@ public partial class MyComponentSettingsControl : ComponentBase<MySettingsClass>
 }
 ```
 
-最后更新注册代码，告诉 ClassIsland 这个组件有一个与之对应的设置控件。
+最后更新注册代码，在调用的注册方法的第二个泛型参数填入设置控件类别，告诉 ClassIsland 这个组件有一个与之对应的设置控件。
 
 ```cs hl_lines="3"
 public void OnServiceConfiguring(HostBuilderContext context, IServiceCollection services) {

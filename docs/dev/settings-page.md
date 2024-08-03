@@ -36,7 +36,7 @@ public partial class ExampleSettingsPage : SettingsPageBase
 }
 ```
 
-还需要向设置页面添加以下属性，以应用主题样式：
+为了应用主题样式，还要向设置页面添加下方高亮的属性：
 
 ```xml title="ExampleSettingsPage.xaml" hl_lines="11-17"
 <ci:SettingsPageBase x:Class="PluginWithSettingsPage.Views.SettingsPages.ExampleSettingsPage"
@@ -63,7 +63,7 @@ public partial class ExampleSettingsPage : SettingsPageBase
 
 ## 声明页面信息
 
-此外，我们还需要为设置页面添加 `SettingsPageInfo` 属性声明设置页面信息。
+此外，为了声明设置页面信息，我们还需要向设置页面的后端代码中添加 `SettingsPageInfo` 属性：
 
 ```cs title="ExampleSettingsPage.xaml.cs" hl_lines="5"
 using ClassIsland.Core.Attributes;
@@ -80,7 +80,7 @@ public partial class ExampleSettingsPage : SettingsPageBase
 }
 ```
 
-您可以为设置页面指定图标、类别等信息，例如：
+您可以在 `SettingsPageInfo` 属性中为设置页面指定图标、类别等信息，例如：
 
 ```cs
 [SettingsPageInfo(
@@ -92,7 +92,7 @@ public partial class ExampleSettingsPage : SettingsPageBase
 )]
 ```
 
-不同的设置页面类别的设置页面会在分组后按一定的顺序显示。设置页面类别具有以下项目：
+您也可以在 `SettingsPageInfo` 属性中指定设置页面的类别。不同的设置页面类别的设置页面会在分组后按一定的顺序显示。设置页面具有以下类别：
 
 | 值 | 类别 | 说明 |
 | -- | -- | -- |
@@ -107,7 +107,7 @@ public partial class ExampleSettingsPage : SettingsPageBase
 
 ## 注册设置页面
 
-编写完设置界面之后，还需要把设置页面注册到应用上。
+编写完设置界面之后，还需要在初始化方法中把设置页面注册到应用上。
 
 === "在插件中注册"
 
@@ -166,4 +166,4 @@ public partial class ExampleSettingsPage : SettingsPageBase
 
 注册完成后，打开【应用设置】，您可以在设置界面的导航栏中看到您注册的设置页面。
 
-您可以查看[设置界面示例](https://github.com/ClassIsland/ExamplePlugins/tree/master/PluginWithSettingsPage)项目来了解更多。
+您可以查看[设置界面示例](https://github.com/ClassIsland/ExamplePlugins/tree/master/PluginWithSettingsPage)项目来了解更多信息。
