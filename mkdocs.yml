@@ -103,7 +103,8 @@ nav:
     - app/notifications.md
     - app/uri-navigation.md
     - app/advanced.md
-    - app/troubleshooting.md
+    - app/reporting-issue.md
+    - app/faq.md
   - 集控:
     - management/index.md
     - management/client-identify.md
