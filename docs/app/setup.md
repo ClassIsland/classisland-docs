@@ -56,7 +56,7 @@
 
 ??? info "高级"
 
-    如果您想体验最新的功能，可以前往[AppVeyor](https://ci.appveyor.com/project/HelloWRC/classisland-yw873/)下载包含最新功能的构建。如果您想自行构建 ClassIsland，请参考[开发文档](../dev/get-started/devlopment.md)。
+    如果您想体验最新的功能，可以前往[GitHub Actions](https://github.com/ClassIsland/ClassIsland/actions/workflows/build_release.yml)下载包含最新功能的构建。如果您想自行构建 ClassIsland，请参考[开发文档](../dev/get-started/devlopment.md)。
 
 ## 解压软件
 
