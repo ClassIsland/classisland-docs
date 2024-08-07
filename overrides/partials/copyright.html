@@ -1,0 +1,33 @@
+<div class="md-copyright">
+    {% if config.copyright %}
+      <div class="md-copyright__highlight">
+        {{ config.copyright }}
+      </div>
+    {% endif %}
+    {% if not config.extra.generator == false %}
+      使用
+      <a
+        href="https://squidfunk.github.io/mkdocs-material/"
+        target="_blank" rel="noopener"
+      >
+        Material for MkDocs
+      </a>
+      生成
+    {% endif %}
+    <span style="margin: 0 4px">
+      |
+    </span>
+    <!-- autocorrect-disable -->
+    <a 
+      href="https://beian.miit.gov.cn/"
+      target="_blank"
+      rel="noopener">沪ICP备2024084943号
+    </a>
+    <a 
+      href="https://beian.mps.gov.cn/#/query/webSearch"
+      target="_blank"
+      style="margin: 0 0 0 2px"
+      rel="noopener">沪公网安备31012002006157号
+    </a>
+    <!-- autocorrect-enable -->
+  </div>
