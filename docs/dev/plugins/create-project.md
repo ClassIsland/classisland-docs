@@ -26,8 +26,8 @@
 
     ![1721876680236](image/create-project/1721876680236.png)
 
-    !!! warning
-        目前 ClassIsland 插件相关的 SDK 还未在 nuget.org 上发布。您需要按照[此文章](https://docs.github.com/zh/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)的方法创建 GitHub 个人访问令牌（classic），并至少赋予 `read:packages` 权限。然后使用以下命令添加 ClassIsland 的 GitHub Packages Nuget 源：
+    ??? info "使用预览版 SDK"
+        您可以通过添加 GitHub Packages 源来获取从 GitHub Actions 构建的最新的 SDK 包。您需要按照[此文章](https://docs.github.com/zh/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)的方法创建 GitHub 个人访问令牌（classic），并至少赋予 `read:packages` 权限。然后使用以下命令添加 ClassIsland 的 GitHub Packages Nuget 源：
 
         ``` shell
         dotnet nuget add source --username（你的用户名） --password（你的 GitHub 个人访问令牌） --store-password-in-clear-text --name github "https://nuget.pkg.github.com/ClassIsland/index.json"
