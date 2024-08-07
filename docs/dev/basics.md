@@ -22,6 +22,9 @@
 - ClassIsland.Core.Converters
 - ClassIsland.Core.Controls
 - ClassIsland.Core.Controls.CommonDialog
+- ClassIsland.Core.Controls.LessonsControls
+- ClassIsland.Core.Controls.IconControl
+- ClassIsland.Core.Controls.NavHyperlink
 - ClassIsland.Core.Commands
 - ClassIsland.Core.Abstractions.Controls
 
