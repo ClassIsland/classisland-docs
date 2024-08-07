@@ -6,25 +6,62 @@
 
 ## 生命周期
 
-以下是 ClassIsland 的生命周期及事件触发的示意图：
+??? abstract "生命周期事件示意图"
 
-```mermaid
-flowchart TD
-    Startup(["应用启动"]) 
-    --> ConfigureHost["配置通用主机"] 
-    --> HostStartup["主机启动"]
-    --> LaunchMainLoop["启动主循环"]
-    --> PreMainTimerTick{{"PreMainTimerTick"}}
-    --> ProcessLessons["处理课表"]
-    --> PostMainTimerTick{{"PostMainTimerTick"}}
-    --> PreMainTimerTick
+    以下是 ClassIsland 的生命周期及事件触发的示意图：
 
-    PostMainTimerTick --> Exit["应用退出"]
+    ```mermaid
+    flowchart TD
+        Startup(["应用启动"]) 
+        --> ConfigureHost["配置通用主机"] 
+        --> HostStartup["主机启动"]
+        --> LaunchMainLoop["启动主循环"]
+        --> AppStarted{{"AppStarted"}}
+        --> PreMainTimerTick{{"PreMainTimerTick"}}
+        --> ProcessLessons["处理课表"]
+        --> PostMainTimerTick{{"PostMainTimerTick"}}
+        --> PreMainTimerTick
+
+        PostMainTimerTick 
+        --> Exiting["应用正在退出"]
+        --> AppStopping{{"AppStopping"}}
+    ```
+
+[TOC]
+
+## 应用生命周期事件
+
+这些事件会在应用生命周期发生改变时触发。要订阅这些事件，需要通过以下代码获取当前应用的实例：
+
+``` csharp
+var app = AppBase.Current;
+
+// 注册应用启动完成事件
+app.AppStarted += (o, e) => Console.WriteLine("AppStarted");
 ```
+
+### 应用启动完成 `AppStarted`
+
+在应用启动完成之后触发。
+
+**事件名：** `AppStarted`
+
+**参数：** *无*
+
+### 应用正在停止 `AppStopping`
+
+在应用正在退出时触发。
+
+!!! warning
+    不要在此事件的事件处理器上进行异步操作。
+
+**事件名：** `AppStopping`
+
+**参数：** *无*
 
 ## 主计时器事件
 
-这些事件会每隔 50ms 触发一次，适用于进行轮询操作。
+这些事件会每隔 50ms 触发一次，适用于进行轮询操作。要订阅这些事件，需要按照[基础知识](./basics.md#依赖注入)文档中关于依赖注入的文档获取 `ClassIsland.Core.Abstractions.Services.ILessonService` 服务。
 
 ### 课表处理前事件
 
