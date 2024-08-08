@@ -54,19 +54,45 @@
 | GitHub | [**GitHub 下载**](https://github.com/HelloWRC/ClassIsland/releases/latest) | [GitHub 下载](https://github.com/HelloWRC/ClassIsland/releases) |
 | AppCenter | [**AppCenter 下载**](https://install.appcenter.ms/users/hellowrc/apps/classisland/distribution_groups/public/releases/latest) | [AppCenter 下载](https://install.appcenter.ms/users/hellowrc/apps/classisland/distribution_groups/publicbeta/releases/latest) |
 
+!!! info "其它下载渠道"
+
+    如果您的网络环境不支持您从以上渠道下载，您可以通过下列的非官方镜像下载，然后通过内置的应用更新升级到最新版本。
+
+    | 下载链接 | 密码 | 来源 |
+    |:--:|:--:|:--:|
+    | https://wwz.lanzouv.com/b00tao8lwb | 0556 | [MC_Sky](https://bilibili.com/read/cv35699004) |
+    | https://pan.quark.cn/s/40d1dca97c3d | | |
+
+    感谢以上提供镜像的同学。
+
 ??? info "高级"
 
     如果您想体验最新的功能，可以前往[GitHub Actions](https://github.com/ClassIsland/ClassIsland/actions/workflows/build_release.yml)下载包含最新功能的构建。如果您想自行构建 ClassIsland，请参考[开发文档](../dev/get-started/devlopment.md)。
 
+### 完整版 vs 精简版
+
+如果您使用 GitHub 下载，您可以选择下载 ClassIsland 的完整版或精简版。文件名为`ClassIsland.zip`的构建是完整版；文件名为`ClassIsland_AssetsTrimmed.zip`的构建是 ClassIsland 的精简版，移除了不必要的资源文件（字体、文档等）以缩小应用体积，同时功能保持不变。
+
+!!! note
+    AppCenter 下载渠道仅提供完整版。
+
 ## 解压软件
 
-下载完成后，将软件压缩包解压到一个您喜欢的地方，运行软件即可开始使用。
+下载完成后，将软件压缩包解压到一个**独立的文件夹（运行路径不能有中文 [^1]）**，运行软件即可开始使用。
 
-!!! warning
-    解压时请不要解压到网盘同步文件夹、【下载】文件夹中，否则可能会出现**文件无法读写、文件丢失**等问题。
+解压时请不要解压到网盘同步文件夹、【下载】文件夹中，否则可能会出现**文件无法读写、文件丢失**等问题。
+
+!!! tip
+    本软件会在该文件夹中储存所有配置。在配置完成后，您可以直接将该文件夹带到学校使用。
+
+## 遇到问题？
+
+如果安装时遇到问题，请参阅[常见问题](./faq.md#安装时)文章。如果问题无法解决，您可以[在社区求助](../community/communities.md)。
 
 ## 开始使用
 
 首次启动时，会有一个简短的欢迎向导来引导您完成本软件的基本设置，并展示软件的一些基本操作。
 
 您也可以观看[入门教程视频](https://www.bilibili.com/video/BV1fA4m1A7uZ/)来快速上手本软件。如果您要进一步了解本软件，您可以继续阅读本文档。
+
+[^1]: 可能会导致应用在更新时卡住无法更新。
