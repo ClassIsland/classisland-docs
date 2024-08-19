@@ -1,4 +1,4 @@
-# 如何反馈问题
+# 如何获取调试信息
 
 当您在使用 ClassIsland 的过程中遇到问题时，您可以[向开发者反馈](https://github.com/ClassIsland/ClassIsland/issues)，或者在[Discussions](https://github.com/ClassIsland/ClassIsland/discussions)和[QQ 群](https://qm.qq.com/q/7BWNv3FcjK)向其它用户和开发者求助。在这时，您可能会被要求提供日志、崩溃报告或运行环境等信息。本文档主要讲述如何获取这些信息，以便诊断问题。
 

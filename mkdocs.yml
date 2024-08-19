@@ -96,15 +96,18 @@ nav:
     - app/index.md
     - app/setup.md
     - app/basic.md
-    - app/profile-settings-page.md
-    - app/classplan.md
-    - app/time-layout.md
-    - app/subject.md
+    - 档案设置:
+      - app/profile-settings-page.md
+      - app/classplan.md
+      - app/time-layout.md
+      - app/subject.md
     - app/notifications.md
     - app/uri-navigation.md
+    - app/backup.md
     - app/advanced.md
-    - app/reporting-issue.md
-    - app/faq.md
+    - 错误排除:
+      - app/faq.md
+      - app/reporting-issue.md
   - 集控:
     - management/index.md
     - management/client-identify.md
