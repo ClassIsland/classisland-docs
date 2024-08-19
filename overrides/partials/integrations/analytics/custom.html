@@ -5,3 +5,24 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "mdtl12ufhw");
 </script>
+<script
+  src="https://browser.sentry-cdn.com/7.116.0/bundle.tracing.replay.min.js"
+  crossorigin="anonymous"
+></script>
+<script>
+    Sentry.onLoad(function() {
+        Sentry.init({
+          dsn: 'http://018efd0e1f2f88a1d256babc094903e2@110.40.26.143:9000/5',
+          replaysSessionSampleRate: 0.05,
+          replaysOnErrorSampleRate: 1,
+          integrations: [
+              Sentry.replayIntegration({
+                blockAllMedia: true,
+              }),
+              Sentry.browserTracingIntegration()
+            ],
+            tracesSampleRate: 0.025,
+            tracePropagationTargets: ["localhost", /^https:\/\/docs\.classisland\.tech/],
+        });
+    });
+</script>
