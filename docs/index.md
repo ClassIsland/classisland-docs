@@ -1,5 +1,7 @@
 # ClassIsland 文档
 
+![1724205131251](image/index/1724205131251.png)
+
 欢迎来到 ClassIsland 的文档。
 
 ## 关于 ClassIsland
