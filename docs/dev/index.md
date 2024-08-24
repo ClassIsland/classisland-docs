@@ -24,7 +24,7 @@ ClassIsland 使用了如下技术栈。在参与 ClassIsland 开发或为 ClassI
 您可以通过以下方法来不同程度地扩展 ClassIsland 的功能。
 
 - **与 ClassIsland 跨进程联动：** 您可以通过跨进程通信技术，从其它进程访问 ClassIsland 的数据（如当前课表、当前上课科目等等），以及调用 ClassIsland 的功能。
-- **[开发 ClassIsland 插件](./plugins/create-project.md：)** 您可以通过插件，轻松地扩展 ClassIsland 的功能，比如添加自定义组件、显示自定义提醒等等。同时也可以与跨进程联动配合，从其他进程调用插件功能。
+- **[开发 ClassIsland 插件](./plugins/create-project.md)：** 您可以通过插件，轻松地扩展 ClassIsland 的功能，比如添加自定义组件、显示自定义提醒等等。同时也可以与跨进程联动配合，从其他进程调用插件功能。
 - **修改 ClassIsland 本体：** 如果上面的方法不能满足您的需求，您也可以通过修改 ClassIsland 本体来实现更高程度的自定义。您也可以向 ClassIsland 代码仓库发起 PR，将您的更改合并到主分支上。
 
 ## 开始
