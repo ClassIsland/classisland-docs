@@ -6,7 +6,7 @@
 
 ## 关于 ClassIsland
 
-ClassIsland 是一款适用于班级多媒体屏幕的课表的信息显示工具，可以一目了然地显示各种信息。本应用的名字灵感源于 iOS 灵动岛（Dynamic Island）功能。
+ClassIsland（`class island`）是一款适用于班级多媒体屏幕的课表的信息显示工具，可以一目了然地显示各种信息。本应用的名字灵感源于 iOS 灵动岛（Dynamic Island）功能。
 
 <div class="grid cards" markdown>
 

@@ -110,10 +110,6 @@ public class Plugin : PluginBase
     public override void Initialize(HostBuilderContext context, IServiceCollection services)
     {
     }
-
-    public override void OnShutdown()
-    {
-    }
 }
 ```
 
@@ -137,6 +133,8 @@ public class Plugin : PluginBase
 
 !!! tip
     您还可以在 `Initialize` 中完成相关服务的注册，详细信息请见[此文章](./basics.md#依赖注入)。
+
+关于插件入口类的详细用法，可以参考文档[插件入口类](./plugin-base.md)。
 
 ## 配置主题
 
