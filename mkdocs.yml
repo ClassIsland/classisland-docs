@@ -2,6 +2,14 @@ site_name: ClassIsland 文档
 repo_url: https://github.com/ClassIsland/ClassIsland
 site_url: https://docs.classisland.tech/zh-cn/latest/
 plugins:
+  - git-revision-date-localized:
+      type: timeago
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
+  - git-committers:
+      repository: ClassIsland/classisland-docs
+      branch: main
   - glightbox
   - search
 copyright: 本文档以 CC BY-NC-SA 4.0 许可协议授权。
@@ -11,11 +19,19 @@ theme:
   custom_dir: overrides
   favicon: assets/favicon.ico
   language: zh
+  icon:
+    repo: simple/github
   features:
     - navigation.instant
     - navigation.indexes 
     - content.code.copy
     - content.code.annotate 
+    - content.action.edit
+    - content.action.view
+    - toc.follow
+    - search.highlight
+    - search.share
+    - search.suggest
     - navigation.footer 
     - navigation.instant.progress
     - navigation.tabs
@@ -40,7 +56,7 @@ theme:
       toggle:
         icon: material/weather-night
         name: 切换到系统主题
-markdown_extensions:
+markdown_extensions: 
   - pymdownx.tabbed:
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
@@ -75,6 +91,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - toc:
+      permalink: ¶
       slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
           case: lower

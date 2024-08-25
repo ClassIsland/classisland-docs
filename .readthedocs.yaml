@@ -17,6 +17,9 @@ build:
     # nodejs: "20"
     # rust: "1.70"
     # golang: "1.20"
+  jobs:
+    post_checkout:
+      - git fetch --unshallow || true
 
 # Python environment
 python:

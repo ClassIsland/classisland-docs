@@ -104,7 +104,7 @@ IconElement = new PackIcon()
 
 ## 显示提醒
 
-注册好提醒主机后，我们的提醒主机就可以发送提醒了。您可以通过订阅您感兴趣的事件（如[上课事件](./events.md#上课事件)、[下课事件](./events.md#下课事件)等），在合适的时机显示提醒。
+注册好提醒主机后，我们的提醒主机就可以发送提醒了。您可以通过订阅您感兴趣的事件（如[上课事件](../events.md#上课事件)、[下课事件](../events.md#下课事件)等），在合适的时机显示提醒。
 
 ### 组成
 
@@ -117,7 +117,7 @@ IconElement = new PackIcon()
 
 ### 订阅事件
 
-我们以在下课时显示提醒为例，添加以下代码获取课程服务，并订阅[下课事件](./events.md#下课事件)：
+我们以在下课时显示提醒为例，添加以下代码获取课程服务，并订阅[下课事件](../events.md#下课事件)：
 
 ``` csharp title="Services/NotificationProviders/MyNotificationProvider.cs" hl_lines="8 11 14 17 20-23"
 // ...
@@ -148,7 +148,7 @@ public class MyNotificationProvider : INotificationProvider, IHostedService
 }
 ```
 
-上面高亮的代码通过在构造函数中添加课程服务参数，获取了课程服务实例，并保存到`LessonsService`属性中备用。接着订阅了[下课事件](./events.md#下课事件)`OnBreakingTime`的事件处理程序`LessonsServiceOnOnBreakingTime`。当下课时，事件处理程序`LessonsServiceOnOnBreakingTime`中的代码就会被调用。
+上面高亮的代码通过在构造函数中添加课程服务参数，获取了课程服务实例，并保存到`LessonsService`属性中备用。接着订阅了[下课事件](../events.md#下课事件)`OnBreakingTime`的事件处理程序`LessonsServiceOnOnBreakingTime`。当下课时，事件处理程序`LessonsServiceOnOnBreakingTime`中的代码就会被调用。
 
 ### 提醒请求
 
