@@ -87,6 +87,21 @@ services.AddHostedService<MyNotificationProvider>();
 
 ![1724554291097](image/index/1724554291097.png)
 
+此外，也可以通过设置`IconElement`属性来指定提醒提供方图标元素。提醒提供方会在提醒设置中显示。`IconElement`属性可以是任意一个可以作为图标的 WPF 控件，比如 PackIcon、Image 等等。以下面的代码为例：
+
+``` csharp
+IconElement = new PackIcon()
+{
+    Kind = PackIconKind.TextLong,
+    Width = 24,
+    Height = 24
+};
+```
+
+上面的代码将图标元素设置为类型为`TextLong`的 PackIcon，在提醒设置界面的效果如下图所示：
+
+![1724580808124](image/index/1724580808124.png)
+
 ## 显示提醒
 
 注册好提醒主机后，我们的提醒主机就可以发送提醒了。您可以通过订阅您感兴趣的事件（如[上课事件](./events.md#上课事件)、[下课事件](./events.md#下课事件)等），在合适的时机显示提醒。
