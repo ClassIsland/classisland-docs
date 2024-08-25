@@ -6,7 +6,7 @@
 
 ClassIsland 使用了如下技术栈。在参与 ClassIsland 开发或为 ClassIsland 开发插件等配套工具时，您最好对以下内容有基本的了解。
 
-- 本项目基于 .NET 8 开发。
+- 本项目基于 [.NET 8](https://learn.microsoft.com/zh-cn/dotnet/core/introduction) 开发，使用 [C#](https://learn.microsoft.com/zh-cn/dotnet/csharp/) 作为编程语言。
 - 本项目使用了 WPF 作为 UI 框架，并使用了 [MaterialDesignInXamlToolkit](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit) 主题。
 - 本项目使用了控制反转（IoC）容器[Microsoft.Extensions.Hosting](https://learn.microsoft.com/zh-cn/dotnet/core/extensions/generic-host)作为依赖注入的实现。
 
