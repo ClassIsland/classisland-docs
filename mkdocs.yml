@@ -129,7 +129,9 @@ nav:
     - dev/events.md
     - dev/uri-navigation.md
     - dev/components.md
-    - dev/notifications.md
+    - 提醒:
+      - dev/notifications/index.md
+      - dev/notifications/advanced-request.md
     - dev/settings-page.md
   - 社区: 
     - community/communities.md
