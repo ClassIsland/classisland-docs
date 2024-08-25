@@ -49,3 +49,4 @@ ClassIsland（`class island`）是一款适用于班级多媒体屏幕的课表�
   [集控]: ./management/index.md
   [开发文档]: ./dev/index.md
   [社区]: ./community/communities.md
+ 
