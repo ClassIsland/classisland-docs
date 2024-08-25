@@ -57,7 +57,7 @@ ClassIsland 使用了如下技术栈。在参与 ClassIsland 开发或为 ClassI
 - [Uri 导航](uri-navigation.md)
 - 内置控件
 - [组件](components.md)
-- 提醒
+- [提醒](./notifications.md)
 - 扩展菜单
 - [设置页面](settings-page.md)
 - 档案附加设置
