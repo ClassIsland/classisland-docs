@@ -1,5 +1,8 @@
 # ClassIsland 文档
 
+> [!warning]
+> 这个文档仓库已废弃，文档正在新仓库 [ClassIsland/classisland-doc-next](https://github.com/ClassIsland/classisland-docs-next) 上维护。
+
 这是 [ClassIsland](https://github.com/HelloWRC/ClassIsland) 文档仓库。本文档基于 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 搭建，目前托管在 [Read The Docs](https://app.readthedocs.org/projects/classisland-docs/) 上。
 
 [在线查看文档](https://docs.classisland.tech/)
